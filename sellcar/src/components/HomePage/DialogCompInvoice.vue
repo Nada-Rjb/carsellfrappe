@@ -9,16 +9,15 @@
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'white'
+    background: 'rgba(0, 0, 0, 0.1)',
+    backdropFilter: 'blur(2px)',
+    
   }"
->
-
-
 
 >
 
   <template #body-title >
-    <div class="flex justify-center items-center w-full gap-[10.5rem] mt-0">
+    <div class="flex justify-center items-center w-full gap-[4.5rem] ">
       <img src="../../assets/imges/elfateh.jpg" class="w-7 h-7" alt="Company Logo" />
     <h2 class="text-lg font-semibold ">Invoice</h2>
 </div>
@@ -82,7 +81,6 @@ import { Dialog } from "frappe-ui";
 
 const Emitter = inject("Emitter");
 const dialog1 = ref(false);
-const grandTotal = ref(9250.0); // Default total
 
 // Open Dialog Function
 const openDialog = () => {
@@ -91,10 +89,6 @@ const openDialog = () => {
 };
 
 // Check if the component is mounted
-onMounted(() => {
-  console.log("Invoice Component Mounted");
-  openDialog(); // Open dialog on mount
-});
 
 // Event Listener for 'open-quickview'
 if (Emitter) {
@@ -108,69 +102,4 @@ if (Emitter) {
 }
 </script>
 
-<style scoped
- >
-html, body {
-  height: 100vh;
-  overflow: hidden !important; /* يمنع أي تمرير غير مرغوب */
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 
-/* Fix Dialog Appearance */
-.dialog-fullscreen {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
-  max-width: 100vw !important;
-  max-height: 100vh !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white !important;
-  overflow: hidden !important;
-}
-
-* {
-  box-sizing: border-box;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-}
-
-
-.wrapper .dialog-class {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-* {
-  margin: 0 !important;
-  padding: 0 !important;
-  outline: 1px solid red !important; /* رؤية الحواف */
-}
-
-/* Ensure Dialog Content is Visible */
-/* back groud  */
-#headlessui-dialog-2{
-  background-color: brown;
-  margin: '0' !important
-
-}
-#headlessui-dialog-panel-5
-{
-  margin: 0 !important;
-border: solid red  !important;
-border-radius: 10px;
-}
-#headlessui-dialog-panel-17{
-  margin: 0!important;
-}
-</style>

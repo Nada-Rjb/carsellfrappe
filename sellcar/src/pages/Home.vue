@@ -6,6 +6,7 @@
   <DebtSummary></DebtSummary>
   <InvoiceActions></InvoiceActions>
   <TransactionButtons></TransactionButtons>
+  <DialogCompInvoice></DialogCompInvoice>
 </template>
 
 <script>
