@@ -30,8 +30,9 @@
   </script>
   <style lang="scss" scoped>
   .status-button {
-    width: 107px;
-    height: 40px;
+ max-width: calc(100% / 3); 
+  min-width: 90px;
+     height: 40px;
     background-color: rgb(49, 49, 46);
     border-radius: var(--border-radius-2);
     color: #f5f5f5;
@@ -63,7 +64,6 @@
       justify-content: center;
       border-radius: 50%;
       font-size: 14px;
-      font-weight: bolder;
       &.success {
         background-color: #c8e6c9;
         color: #4caf50;

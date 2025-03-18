@@ -17,9 +17,11 @@
   };
   </script>
   <style>
-  .TransactionButtons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+.TransactionButtons {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing */
+  align-items: center;
+    width: 100%;
+
+}
   </style>

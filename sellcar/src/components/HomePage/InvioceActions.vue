@@ -15,7 +15,9 @@
 
 
   <style scoped>
-  
+  .section {
+    margin-bottom: 1rem;
+  }
   .invoice-actions {
     display: flex;
     flex-direction: column;

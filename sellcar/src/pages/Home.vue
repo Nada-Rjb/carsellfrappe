@@ -5,12 +5,7 @@
   <customer-info></customer-info>
   <DebtSummary></DebtSummary>
   <InvoiceActions></InvoiceActions>
-  <DialogCompInvoice></DialogCompInvoice>
-  <DebtSummary></DebtSummary>
   <TransactionButtons></TransactionButtons>
-    <DebtSummary></DebtSummary>
-
-
 </template>
 
 <script>
