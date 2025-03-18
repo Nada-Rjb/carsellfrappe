@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/NagariaHussain/doppio#readme",
   "devDependencies": {
+    "sass-embedded": "^1.86.0",
     "vite": "^5.4.10"
   },
   "dependencies": {
+    "frappe-ui": "^0.1.116",
+    "mitt": "^3.0.1",
     "socket.io-client": "^4.8.1",
     "vue": "^3.5.12"
   }

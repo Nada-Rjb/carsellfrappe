@@ -185,3 +185,5 @@ website_route_rules = [
 # auth_hooks = [
 # 	"doppio.auth.validate"
 # ]
+
+website_route_rules = [{'from_route': '/sellcar/<path:app_path>', 'to_route': 'sellcar'}, {'from_route': '/CAR/<path:app_path>', 'to_route': 'CAR'}, {'from_route': '/CAR/<path:app_path>', 'to_route': 'CAR'},]
