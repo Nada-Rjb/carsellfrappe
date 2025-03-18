@@ -74,7 +74,6 @@
     overflow-x: clip;
     position: relative;
     border-bottom: #d9d9d9 solid;
-    z-index: 101;
   
     a {
       color: var(--clt-black);
@@ -92,7 +91,6 @@
     align-items: center;
   }
   [area-control="primary-navigation"] {
-    z-index: 100;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -126,7 +124,6 @@
         overflow-x: clip;
         position: relative;
         border-bottom: #d9d9d9 solid;
-        z-index: 101;
       }
       height: calc(100vh - 5rem); /* Full height */
       position: hidden;
@@ -148,7 +145,6 @@
         flex-direction: column;
         max-width: 400px;
         width: 80%;
-        z-index: 100;
         border-radius: var(--border-radius-3);
         padding: 2rem 0;
   

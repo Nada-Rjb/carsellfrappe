@@ -1,14 +1,24 @@
 <template>
-  <section class="flow section" data-padding="compact">
-    <div class="wrapper" id="main">
-      <div class="invoice-actions">
-        <!-- Dialog Component -->
-        <Button @click="dialog = true">
-  Show Dialog
-</Button>
-<Dialog v-model="dialog1">
+<div  id="main">        <!-- Dialog Component -->     
+        <Dialog  
+  v-model="dialog1"  
+  class="dialog-fullscreen"
+  :style="{  
+    width: '100vw',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'white'
+  }"
+>
+
+
+
+>
+
   <template #body-title >
-    <div class="flex justify-center items-center w-full gap-[10.5rem]">
+    <div class="flex justify-center items-center w-full gap-[10.5rem] mt-0">
       <img src="../../assets/imges/elfateh.jpg" class="w-7 h-7" alt="Company Logo" />
     <h2 class="text-lg font-semibold ">Invoice</h2>
 </div>
@@ -19,7 +29,7 @@
               <p class="text-xl text-black mt-4" > Date: 13-03-2025</p>  
               <hr class="my-3 border-[#D9D9D9] border-[1px] " />
           <!-- Invoice Items -->
-          <div class="text-xl text-black p-2">
+          <div class=" max-h-[250px] overflow-y-auto text-xl text-black p-2">
                 <div class=" py-1">
                   <span>Item name with full name</span>
                   <div class="flex gap-10 mt-5">
@@ -42,7 +52,16 @@
                     <span>5<span class="ml-1">kg</span></span>
                     <span>1,850.0</span>
                   <span>9,250.0</span>
+                  </div> 
+                </div>
+                <div class=" py-1">
+                  <span>Item name with full name</span>
+                  <div class="flex gap-10 mt-5">
+                    <span>5<span class="ml-1">kg</span></span>
+                    <span>1,850.0</span>
+                  <span>9,250.0</span>
                   </div>
+                  
                 </div>
               </div>
               <hr class="my-3 border-[#D9D9D9] border-[1px] " />
@@ -51,25 +70,10 @@
                 Grand Total: <span class="text-black">1421 EGP</span>
               </p>
               </template>
-  <template #actions>
-    <Button variant="solid">
-      Confirm
-    </Button>
-    <Button
-      class="ml-2"
-      @click="dialog1 = false"
-    >
-      Close
-    </Button>
-  </template>
-</Dialog>
+  
+</Dialog></div>
         <!-- Open Invoice Button -->
-        <button @click="openDialog" class="mt-4 px-5 py-2 bg-blue-600 text-white font-bold rounded-md">
-          Open Invoice
-        </button>
-      </div>
-    </div>
-  </section>
+    
 </template>
 
 <script setup>
@@ -104,23 +108,69 @@ if (Emitter) {
 }
 </script>
 
-<style scoped>
+<style scoped
+ >
+html, body {
+  height: 100vh;
+  overflow: hidden !important; /* يمنع أي تمرير غير مرغوب */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Fix Dialog Appearance */
+.dialog-fullscreen {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white !important;
+  overflow: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+
+.wrapper .dialog-class {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: 1px solid red !important; /* رؤية الحواف */
+}
 
 /* Ensure Dialog Content is Visible */
-:deep(.frappe-dialog) {
-  display: block !important;
-  z-index: 9999 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
+/* back groud  */
+#headlessui-dialog-2{
+  background-color: brown;
+  margin: '0' !important
 
-/* Debugging: Ensure Dialog Elements are Visible */
-.bg-white {
-  background-color: white !important;
-  color: black !important;
 }
-
-dialog {
-  border: 2px solid red; /* For debugging, remove later */
+#headlessui-dialog-panel-5
+{
+  margin: 0 !important;
+border: solid red  !important;
+border-radius: 10px;
+}
+#headlessui-dialog-panel-17{
+  margin: 0!important;
 }
 </style>

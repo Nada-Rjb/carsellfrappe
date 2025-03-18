@@ -38,7 +38,10 @@
   }
   
   .customer-img {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     aspect-ratio: 16 / 9;
     object-fit: cover; /* Better scaling */
     background-color: #eee;

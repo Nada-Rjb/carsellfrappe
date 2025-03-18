@@ -63,6 +63,7 @@
       justify-content: center;
       border-radius: 50%;
       font-size: 14px;
+      font-weight: bolder;
       &.success {
         background-color: #c8e6c9;
         color: #4caf50;

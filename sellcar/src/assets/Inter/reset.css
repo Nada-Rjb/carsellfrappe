@@ -41,8 +41,17 @@
     body {
       min-height: 100vh;
       line-height: 1.6;
+      width: 100%;
+
+
     }
-  
+  html, body, #app {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
     /* Set shorter line heights on headings and interactive elements */
     h1,
     h2,
@@ -285,6 +294,10 @@
     .wrapper {
       --wraper--max--width: 1130px;
       --wrapper-padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
   
       max-width: var(--wraper--max--width);
       margin-inline: auto;
